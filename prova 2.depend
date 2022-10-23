@@ -1,0 +1,154 @@
+# depslib dependency file v1.0
+1664392744 source:d:\ufop\quarto período\aeds 2\prova 2\funcionario.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"funcionario.h"
+
+1664393009 d:\ufop\quarto período\aeds 2\prova 2\funcionario.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1666380996 source:d:\ufop\quarto período\aeds 2\prova 2\interface.c
+	<stdio.h>
+	<stdlib.h>
+	"interface.h"
+
+1666368615 d:\ufop\quarto período\aeds 2\prova 2\interface.h
+	<stdio.h>
+	<stdlib.h>
+	"hash.h"
+
+1666368576 d:\ufop\quarto período\aeds 2\prova 2\selecao.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"funcionario.h"
+
+1666374080 source:d:\ufop\quarto período\aeds 2\prova 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"interface.h"
+
+1665750215 source:d:\ufop\quarto período\aeds 2\prova 2\selecao.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"selecao.h"
+
+1666381822 source:d:\ufop\quarto período\aeds 2\prova 2\hash.c
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	"hash.h"
+
+1666381881 d:\ufop\quarto período\aeds 2\prova 2\hash.h
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	"selecao.h"
+
+1664392744 source:d:\ufop\quarto período\aeds 2\prova 2 - copia\funcionario.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"funcionario.h"
+
+1664393009 d:\ufop\quarto período\aeds 2\prova 2 - copia\funcionario.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1666551519 source:d:\ufop\quarto período\aeds 2\prova 2 - copia\hash.c
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	"hash.h"
+
+1666382162 d:\ufop\quarto período\aeds 2\prova 2 - copia\hash.h
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	"selecao.h"
+
+1666391713 d:\ufop\quarto período\aeds 2\prova 2 - copia\selecao.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"funcionario.h"
+
+1666551838 source:d:\ufop\quarto período\aeds 2\prova 2 - copia\interface.c
+	<stdio.h>
+	<stdlib.h>
+	"interface.h"
+
+1666368615 d:\ufop\quarto período\aeds 2\prova 2 - copia\interface.h
+	<stdio.h>
+	<stdlib.h>
+	"hash.h"
+
+1666552875 source:d:\ufop\quarto período\aeds 2\prova 2 - copia\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"interface.h"
+
+1666391705 source:d:\ufop\quarto período\aeds 2\prova 2 - copia\selecao.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"selecao.h"
+
+1664392744 source:d:\ufop\quartoperíodo\aeds2\prova2-copia\funcionario.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"funcionario.h"
+
+1664393009 d:\ufop\quartoperíodo\aeds2\prova2-copia\funcionario.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1666554427 source:d:\ufop\quartoperíodo\aeds2\prova2-copia\hash.c
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	"hash.h"
+
+1666382162 d:\ufop\quartoperíodo\aeds2\prova2-copia\hash.h
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	"selecao.h"
+
+1666391713 d:\ufop\quartoperíodo\aeds2\prova2-copia\selecao.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"funcionario.h"
+
+1666554569 source:d:\ufop\quartoperíodo\aeds2\prova2-copia\interface.c
+	<stdio.h>
+	<stdlib.h>
+	"interface.h"
+
+1666368615 d:\ufop\quartoperíodo\aeds2\prova2-copia\interface.h
+	<stdio.h>
+	<stdlib.h>
+	"hash.h"
+
+1666552875 source:d:\ufop\quartoperíodo\aeds2\prova2-copia\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"interface.h"
+
+1666391705 source:d:\ufop\quartoperíodo\aeds2\prova2-copia\selecao.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"selecao.h"
+
