@@ -10,8 +10,9 @@ void MSG_MENU(){
     printf("\n\t3. KEYSORTING COM BUSCA BINARIA;");
     printf("\n\t4. SELECAO POR SUBSTITUICAO;");
     printf("\n\t5. SELECAO NATURAL;");
-    printf("\n\t6. HASH;");
-    printf("\n\t7. SAIR.");
+    printf("\n\t5. IMPRIMIR PARTICOES;");
+    printf("\n\t7. HASH;");
+    printf("\n\t8. SAIR.");
     printf("\n\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
 }
 
@@ -26,17 +27,12 @@ void MSG_MENU6(){
 }
 
 void MENU6(){
-    int opcao=0,i,busc;
+    int opcao=0,i,busc=0;
     Hash *tab;
     tab = (Hash *)malloc(100*sizeof(Hash));
     int tamanho = 100;
     inicializa(tab,tamanho);
     FILE *arq = fopen("pessoas.dat","rb");
-    TCelula *celula;
-    celula = (TCelula *)malloc(sizeof(TCelula));
-    celula->info.cod=0;
-    celula->info.pos=0;
-    celula->prox=NULL;
     TFunc *func;
     do{
         MSG_MENU6();
@@ -46,21 +42,16 @@ void MENU6(){
         switch(opcao){
             case 1:
                 for(i = 0;i < tamanho; i++){
-                    celula->info.pos=ftell(arq);
                     func = le(arq);
-                    celula->info.cod = func->cod;
-                    insere(tab,tamanho,celula);
+                    insere(tab,tamanho,func->cod,(ftell(arq)-sizeof(TFunc)));
                 }
                 system("PAUSE");
                 break;
             case 2:
-                printf("\nDIGITE O CODIGO DO FUNCIONARIO: ");
+                printf("\n\nDigite um codigo para busca: ");
                 fflush(stdin);
                 scanf("%d", &busc);
-                printf("qualquer coisa");
-                printf("%d",busca(tab,tamanho,busc));
-                fseek(arq,busca(tab,tamanho,busc),SEEK_SET);
-                print_func(le(arq));
+                busca(tab,tamanho,busc);
                 system("PAUSE");
                 break;
             case 3:
@@ -77,14 +68,13 @@ void MENU6(){
                 printf("\n\n\t >>>>>> ERROR: Digite uma opcao valida!!! <<<<<<\n\n\n");
                 system("PAUSE");
             }
-
         }
     while(opcao!=4);
 
 }
 
 void MENU(){
-    int codigo=0;
+    int codigo=0,codigo1=0;
     int opcao=0;
     do
     {
@@ -130,8 +120,15 @@ void MENU(){
                 system("PAUSE");
                 break;
             case 6:
-                MENU6();
+                printf("1 - NATURAL / 2 - SUBSTITUICAO: \n");
+                fflush(stdin);
+                scanf("%d", &codigo1);
+                imprime_partSN(codigo1);
+                system("PAUSE");
+                break;
             case 7:
+                MENU6();
+            case 8:
                 system("cls");
                 printf("\n\n\t >>>>>> MSG: Saindo do programa... <<<<<<\n\n");
                 fclose(arq);
@@ -143,6 +140,5 @@ void MENU(){
                 system("PAUSE");
             }
     }
-    while(opcao != 7);
+    while(opcao != 8);
 }
-

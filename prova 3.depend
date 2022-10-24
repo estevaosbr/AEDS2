@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1664392744 source:d:\ufop\quartoperíodo\aeds2\prova 3\funcionario.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"funcionario.h"
+
+1664393009 d:\ufop\quartoperíodo\aeds2\prova 3\funcionario.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1666571250 source:d:\ufop\quartoperíodo\aeds2\prova 3\hash.c
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	"hash.h"
+
+1666570561 d:\ufop\quartoperíodo\aeds2\prova 3\hash.h
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	"selecao.h"
+
+1666556987 d:\ufop\quartoperíodo\aeds2\prova 3\selecao.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"funcionario.h"
+
+1666570844 source:d:\ufop\quartoperíodo\aeds2\prova 3\interface.c
+	<stdio.h>
+	<stdlib.h>
+	"interface.h"
+
+1666368615 d:\ufop\quartoperíodo\aeds2\prova 3\interface.h
+	<stdio.h>
+	<stdlib.h>
+	"hash.h"
+
+1666566297 source:d:\ufop\quartoperíodo\aeds2\prova 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"interface.h"
+
+1666566219 source:d:\ufop\quartoperíodo\aeds2\prova 3\selecao.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"selecao.h"
+

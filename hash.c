@@ -16,44 +16,53 @@ int hash(int cod, int tam) {
     return cod % tam;
 }
 
-void libera(Hash *tab, int m) {
-    int i;
-    for (i = 0; i < m; i++) {
-        if (tab[i]) {
-            free(tab[i]);
+void busca(Hash *tab, int m, int cod){
+    int h = hash(cod,m);
+    FILE *arq = fopen("pessoas.dat","r+b");
+    TCelula *c = tab[h];
+    if(tab[h]==NULL){
+        printf("\n\nCODIGO DE FUNCIONARIO NAO ENCONTRADO!\n\n");
+    }
+    else{
+        while(c!=NULL){
+            if(c->cod==cod){
+                fseek(arq,c->pos,SEEK_SET);
+                print_func(le(arq));
+                break;
+            }
+            c = c->prox;
+        }
+        if(c==NULL){
+            printf("\n\nCODIGO DE FUNCIONARIO NAO ENCONTRADO!\n\n");
         }
     }
+    fclose(arq);
 }
 
-int busca(Hash *tab, int m, int cod) {
-    int pos = hash(cod, m);
-    if(tab[pos] == NULL){
-        return -1;
-    }
-    TCelula *p = tab[pos];
-    printf("%ld",tab[pos]->info.pos);
-    while((p != NULL && p->info.cod!= cod)){
-        p = p->prox;
-    }
-    return p->info.pos;
+TCelula *aloca(int cod, long int pos){
+    TCelula *novo = (TCelula *)malloc(sizeof(TCelula));
+    novo->cod = cod;
+    novo->pos = pos;
+    novo->prox = NULL;
+    return novo;
 }
 
-void insere_aux(TCelula *atual, TCelula *prox){
-    if(atual->prox == NULL){
-        atual->prox=prox;
+void insere_aux(TCelula *celula, int cod, long int pos){
+    if(celula->prox == NULL){
+        celula->prox = aloca(cod,pos);
     }
     else{
-        insere_aux(atual->prox,prox);
+        insere_aux(celula->prox,cod,pos);
     }
 }
 
-void insere(Hash *tab, int m, TCelula *x) {
-    int h = hash(x->info.cod, m);
+void insere(Hash *tab, int m, int cod, long int pos) {
+    int h = hash(cod, m);
     if(tab[h] == NULL){
-        tab[h] = x;
+        tab[h] = aloca(cod,pos);
     }
     else{
-        insere_aux(tab[h],x);
+        insere_aux(tab[h],cod,pos);
     }
 }
 
@@ -64,10 +73,9 @@ void imprime(Hash tab[], int m) {
         if (tab[i]!=NULL) {
             printf("\n");
             while (tab[i]!=NULL) {
-                printf("\n\n %ld \n\n",tab[i]->info.pos);
                 FILE *arquivo = fopen("pessoas.dat","rb");
-                fseek(arquivo,tab[i]->info.pos,SEEK_SET);
-                //print_func(le(arquivo));
+                fseek(arquivo,tab[i]->pos,SEEK_SET);
+                print_func(le(arquivo));printf("\n");
                 tab[i] = tab[i]->prox;
             }
         }

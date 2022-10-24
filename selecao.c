@@ -131,4 +131,38 @@ void selecao_nat(FILE *arq, int m){
     }
 }
 
+void imprime_part(char* nome){
+    FILE *arq = fopen(nome,"rb");
+    printf("%s: \n",nome);
+    while(1){
+        TFunc *func = le(arq);
+        if(feof(arq)){
+            break;
+        }
+        //print_func(func);
+        printf("\n%d",func->cod);
+        //printf("\n\n");
+    }
+    fclose(arq);
+}
 
+void imprime_partSN(int tipo){
+    int i;
+    for(i =1;i<10;i++){
+        if(tipo==1){
+            char* id = "pN";
+            char arq2[10];
+            snprintf (arq2, 10, "%s%d%s", id, i,".dat");
+            imprime_part(arq2);
+            printf("\n\n\n");
+        }
+        if(tipo==2){
+            char* id = "pS";
+            char arq2[10];
+            snprintf (arq2, 10, "%s%d%s", id, i,".dat");
+            imprime_part(arq2);
+            printf("\n\n\n");
+        }
+        printf("passei");
+    }
+}

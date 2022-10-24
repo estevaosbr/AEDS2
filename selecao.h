@@ -21,3 +21,5 @@ void selecao_nat(FILE *arq, int m);
 int menor(TVet* vet, int tam);
 int fimarq(FILE *arq);
 void intercalacao(FILE *arq, int num_p);
+void imprime_part(char* nome);
+void imprime_partSN(int tipo);
